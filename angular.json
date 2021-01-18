@@ -20,7 +20,14 @@
               "apps/driving-app/src/favicon.ico",
               "apps/driving-app/src/assets"
             ],
-            "styles": ["apps/driving-app/src/styles.scss"],
+            "styles": [
+              "node_modules/@coreui/icons/css/free.css",
+              "node_modules/flag-icon-css/css/flag-icon.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/simple-line-icons/dist/styles/simple-line-icons.css",
+              "apps/driving-app/src/scss/style.scss",
+              "apps/driving-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -201,7 +208,8 @@
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "style":"scss"
     },
     "@nrwl/angular:component": {
       "style": "scss"
