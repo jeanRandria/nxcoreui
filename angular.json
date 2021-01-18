@@ -28,7 +28,16 @@
               "apps/driving-app/src/scss/style.scss",
               "apps/driving-app/src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules"
+              ]
+            },
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "chart.js",
+              "classnames"
+            ]
           },
           "configurations": {
             "production": {
@@ -186,6 +195,81 @@
           }
         }
       }
+    },
+    "drivingapp-shared-ui": {
+      "projectType": "library",
+      "root": "libs/drivingapp/shared/ui",
+      "sourceRoot": "libs/drivingapp/shared/ui/src",
+      "prefix": "the-driving-schoolv1",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/drivingapp/shared/ui/src/**/*.ts",
+              "libs/drivingapp/shared/ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/drivingapp/shared/ui"],
+          "options": {
+            "jestConfig": "libs/drivingapp/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "drivingapp-dashboard": {
+      "projectType": "library",
+      "root": "libs/drivingapp/dashboard",
+      "sourceRoot": "libs/drivingapp/dashboard/src",
+      "prefix": "the-driving-schoolv1",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/drivingapp/dashboard/src/**/*.ts",
+              "libs/drivingapp/dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/drivingapp/dashboard"],
+          "options": {
+            "jestConfig": "libs/drivingapp/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "drivingapp-account": {
+      "projectType": "library",
+      "root": "libs/drivingapp/account",
+      "sourceRoot": "libs/drivingapp/account/src",
+      "prefix": "the-driving-schoolv1",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/drivingapp/account/src/**/*.ts",
+              "libs/drivingapp/account/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/drivingapp/account"],
+          "options": {
+            "jestConfig": "libs/drivingapp/account/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -209,10 +293,11 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest",
-      "style":"scss"
+      "style": "scss"
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "prefix": "app"
     }
   },
   "defaultProject": "driving-app"

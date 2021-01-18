@@ -15,8 +15,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent }
 ];*/
 export const routes: Routes = [
- { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
- {path: '404', component: }
+
 ]
 
 @NgModule({

@@ -17,6 +17,15 @@
     "paths": {
       "@the-driving-schoolv1/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
+      ],
+      "@the-driving-schoolv1/drivingapp/shared/ui": [
+        "libs/drivingapp/shared/ui/src/index.ts"
+      ],
+      "@the-driving-schoolv1/drivingapp/dashboard": [
+        "libs/drivingapp/dashboard/src/index.ts"
+      ],
+      "@the-driving-schoolv1/drivingapp/account": [
+        "libs/drivingapp/account/src/index.ts"
       ]
     }
   },
